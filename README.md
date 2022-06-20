@@ -1,4 +1,4 @@
 # MediRem
- Medicine reminder
+ Medicine reminder with Xamarin.Forms
 ---
 # Not Finished
