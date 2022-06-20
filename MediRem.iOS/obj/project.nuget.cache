@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "mie+W4KjAqTZLczbC5Nl4hCNA6HNFTTH3/WOTV713iP42MqU6uPILsKP80gmA6UzEgB0F+jPR9OEzLKtPFrM9g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Semih\\source\\repos\\MediRem\\MediRem.iOS\\MediRem.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Semih\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Semih\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.2\\xamarin.communitytoolkit.2.0.2.nupkg.sha512",
+    "C:\\Users\\Semih\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\Semih\\.nuget\\packages\\xamarin.forms\\5.0.0.2478\\xamarin.forms.5.0.0.2478.nupkg.sha512"
+  ],
+  "logs": []
+}
