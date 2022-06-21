@@ -11,6 +11,7 @@
             <Color x:Key="Black">#000000</Color>
             <Color x:Key="Red">#FFFF0000</Color>
             <Color x:Key="colorPrimaryFormIlacEkle">#000000</Color>
+            <Color x:Key="colorProgressBarFormIlacEkle">#2196F3</Color>
             <Color x:Key="colorPopupBackgroundColor">#ffffff</Color>
             <Color x:Key="colorPrimaryColorPicker">#000000</Color>
             <Size x:Key="sizePopup">353,553</Size>

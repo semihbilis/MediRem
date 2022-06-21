@@ -1,4 +1,5 @@
-﻿using MediRem.Views.Popups;
+﻿using MediRem.Models.MidEntity;
+using MediRem.Views.Popups;
 using System;
 using System.ComponentModel;
 using Xamarin.CommunityToolkit.Extensions;

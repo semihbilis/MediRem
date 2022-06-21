@@ -9,11 +9,9 @@ namespace MediRem.Models.Entitys
         public string Ad { get; set; }
         public string Renk { get; set; }
         public string Resim { get; set; }
-        public short PaketSayisi { get; set; }
-        public short PlakSayisi { get; set; }
-        public short TaneSayisi { get; set; }
+        public short Adet { get; set; }
 
-        public int KullanimTipiId { get; set; }
+        public Guid KullanimTipiId { get; set; }
         public KullanimTipi KullanimTipi { get; set; }
     }
 }
