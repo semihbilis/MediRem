@@ -12,16 +12,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\Popups\ColorPickerPage.xaml.cs">
-      <DependentUpon>ColorPickerPage.xaml</DependentUpon>
+    <Compile Update="Views\Popups\ColorPickerPopup.xaml.cs">
+      <DependentUpon>ColorPickerPopup.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Popups\IlacEkle1Page.xaml.cs">
-      <DependentUpon>IlacEkle1Page.xaml</DependentUpon>
+    <Compile Update="Views\Popups\IlacEkleFirstStepPopup.xaml.cs">
+      <DependentUpon>IlacEkleFirstStepPopup.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\Popups\ColorPickerPage.xaml">
+    <EmbeddedResource Update="Views\Popups\ColorPickerPopup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

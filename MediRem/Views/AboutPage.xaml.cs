@@ -17,7 +17,16 @@ namespace MediRem.Views
 
         private void btnIlacEkle_Clicked(object sender, EventArgs e)
         {
-            Navigation.ShowPopup(new IlacEkle1());
+            //FirstStep firstStep = new FirstStep()
+            //{
+            //    Ad = "TestAspirin",
+            //    KutuAdet = 1,
+            //    PlakaAdet = 3,
+            //    TaneAdet = 5,
+            //    Renk = "Purple",
+            //    Resim = ""
+            //};
+            Navigation.ShowPopup(new IlacEkleFirstStepPopup());
         }
     }
 }

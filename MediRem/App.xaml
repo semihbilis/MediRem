@@ -14,7 +14,7 @@
             <Color x:Key="colorProgressBarFormIlacEkle">#2196F3</Color>
             <Color x:Key="colorPopupBackgroundColor">#ffffff</Color>
             <Color x:Key="colorPrimaryColorPicker">#000000</Color>
-            <Size x:Key="sizePopup">353,553</Size>
+            <Size x:Key="sizeIlacEklePopup">353,579</Size>
             <Size x:Key="sizeColorPicker">253, 553</Size>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
