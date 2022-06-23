@@ -18,10 +18,16 @@
     <Compile Update="Views\Popups\IlacEkleFirstStepPopup.xaml.cs">
       <DependentUpon>IlacEkleFirstStepPopup.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Popups\AddPillPopup.xaml.cs">
+      <DependentUpon>AddPillPopup.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Views\Popups\ColorPickerPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Popups\AddPillPopup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

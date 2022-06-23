@@ -8,25 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("MediRem.Views.Popups.IlacEkleFirstStepPopup.xaml", "Views/Popups/IlacEkleFirstStepPopup.xaml", typeof(global::MediRem.Views.Popups.IlacEkleFirstStepPopup))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("MediRem.Views.Popups.AddPillPopup.xaml", "Views/Popups/AddPillPopup.xaml", typeof(global::MediRem.Views.Popups.AddPillPopup))]
 
 namespace MediRem.Views.Popups {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Popups\\IlacEkleFirstStepPopup.xaml")]
-    public partial class IlacEkleFirstStepPopup : global::Xamarin.CommunityToolkit.UI.Views.Popup {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Popups\\AddPillPopup.xaml")]
+    public partial class AddPillPopup : global::Xamarin.CommunityToolkit.UI.Views.Popup {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.StackLayout FirstStepPopup;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button btnPopupPrevious;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button btnPopupNext;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button btnPopupClose;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ImageButton imgbtnRenkSec;
@@ -84,11 +75,8 @@ namespace MediRem.Views.Popups {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(IlacEkleFirstStepPopup));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AddPillPopup));
             FirstStepPopup = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "FirstStepPopup");
-            btnPopupPrevious = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnPopupPrevious");
-            btnPopupNext = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnPopupNext");
-            btnPopupClose = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnPopupClose");
             imgbtnRenkSec = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "imgbtnRenkSec");
             tbxName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "tbxName");
             imgbtnResimSec = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "imgbtnResimSec");

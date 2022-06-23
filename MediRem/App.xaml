@@ -10,11 +10,23 @@
             <Color x:Key="Primary">#2196F3</Color>
             <Color x:Key="Black">#000000</Color>
             <Color x:Key="Red">#FFFF0000</Color>
+
+            <Color x:Key="ColorPrimaryAddPillPopup">#000000</Color>
+            <Color x:Key="colorBackgroundColorAddPillPopup">#ffffff</Color>
+            <Size x:Key="sizeAddPillPopup">
+                <Size.Width>353</Size.Width>
+                <Size.Height>553</Size.Height>
+            </Size>
+
+
             <Color x:Key="colorPrimaryFormIlacEkle">#000000</Color>
             <Color x:Key="colorProgressBarFormIlacEkle">#2196F3</Color>
             <Color x:Key="colorPopupBackgroundColor">#ffffff</Color>
             <Color x:Key="colorPrimaryColorPicker">#000000</Color>
-            <Size x:Key="sizeIlacEklePopup">353,579</Size>
+            <Size x:Key="sizeIlacEklePopup">
+                <Size.Width>353</Size.Width>
+                <Size.Height>579</Size.Height>
+            </Size>
             <Size x:Key="sizeColorPicker">253, 553</Size>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>

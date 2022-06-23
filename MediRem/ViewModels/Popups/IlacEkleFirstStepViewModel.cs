@@ -40,7 +40,7 @@ namespace MediRem.ViewModels.Popups
             string[] resultTypes = result.ContentType.Split('/');
             if (result != null && resultTypes[0].Equals("image"))
             {
-                _firstStep.Resim = result.FullPath;
+                FirstStep.Resim = result.FullPath;
             }
         }
 
@@ -68,7 +68,7 @@ namespace MediRem.ViewModels.Popups
             switch (variable.ToLower())
             {
                 case "kutuadet":
-                    int countK = FirstStep.KutuAdet; //Arkaplanda aynı değere ulaşmak için her seferinde nesneye gidip geliyor.
+                    int countK = FirstStep.KutuAdet;
                     FirstStep.KutuAdet = proc == 2 ? countK += amount : proc == 1 ? countK -= amount : 0;
                     if (FirstStep.KutuAdet <= 0)
                         FirstStep.KutuAdet = 1;

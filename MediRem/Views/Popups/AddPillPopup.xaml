@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+           Size="{StaticResource sizeAddPillPopup}"
+           Color="Transparent"
+           BackgroundColor="Transparent"
+           MinimumHeightRequest="353" MinimumWidthRequest="353"
+           VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"
+           IsLightDismissEnabled="True"
+           x:Class="MediRem.Views.Popups.AddPillPopup">
+    <Frame xct:CornerRadiusEffect.CornerRadius="33,33,0,0" IsClippedToBounds="True" BackgroundColor="{StaticResource colorBackgroundColorAddPillPopup}" Padding="0"
+           BorderColor="Transparent">
+        <xct:TabView TabStripPlacement="Bottom">
+            <xct:TabViewItem Text="İlaç Bilgileri">
+                <xct:TabViewItem.Content>
+                    <StackLayout x:Name="FirstStepPopup" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="17" Spacing="0">
+                        <ScrollView Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Spacing="7"
+                                     BindingContext="{Binding AddPillDto}">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Spacing="7" Margin="0,0,0,7">
+                                    <ImageButton x:Name="imgbtnRenkSec" VerticalOptions="Center" HorizontalOptions="Start"
+                                             Source="Color.png" Aspect="AspectFit" BorderWidth="3" BackgroundColor="Transparent"
+                                             BorderColor="{Binding Renk, Mode=TwoWay, FallbackValue={StaticResource colorPrimaryFormIlacEkle}}"
+                                             WidthRequest="41" HeightRequest="41" CornerRadius="20" xct:TouchEffect.NativeAnimation="True"
+                                             xct:TouchEffect.Command="{Binding BindingContext.ColorPicker, Source={x:Reference FirstStepPopup}}"/>
+                                    <Entry x:Name="tbxName" Text="{Binding Ad, Mode=TwoWay, FallbackValue=''}" TextColor="{StaticResource colorPrimaryFormIlacEkle}"
+                                       Placeholder="İlaç Adını Giriniz" FontSize="Medium" Margin="0,0,7,0"
+                                       PlaceholderColor="{StaticResource colorPrimaryFormIlacEkle}"
+                                       HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                       HorizontalTextAlignment="Start" VerticalTextAlignment="Center" xct:TouchEffect.NativeAnimation="True"/>
+                                </StackLayout>
+                                <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ImageButton x:Name="imgbtnResimSec" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"
+                                             Source="Photos.png" Aspect="AspectFit" BorderWidth="1" BorderColor="{StaticResource colorPrimaryFormIlacEkle}"
+                                             WidthRequest="41" HeightRequest="41" CornerRadius="20" BackgroundColor="Transparent"
+                                             xct:TouchEffect.NativeAnimation="True"
+                                             xct:TouchEffect.Command="{Binding BindingContext.ChoosePicture, Source={x:Reference FirstStepPopup}}"/>
+                                    <Frame x:Name="frameBorderPickedImage" HasShadow="True" Grid.Column="1"
+                                       VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"
+                                       BackgroundColor="{Binding Renk, Mode=OneWay, FallbackValue={StaticResource colorPrimaryFormIlacEkle}}"
+                                       BorderColor="Transparent" Padding="0" Margin="0"
+                                       IsVisible="{Binding Resim, Mode=OneWay, Converter={xct:IsNotNullOrEmptyConverter}}"
+                                       HeightRequest="79" WidthRequest="79" CornerRadius="39">
+                                        <Frame x:Name="framePickedImage" HasShadow="True" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                                           BorderColor="Transparent" BackgroundColor="Transparent" Padding="0" Margin="0"
+                                           HeightRequest="71" WidthRequest="71" CornerRadius="35" IsClippedToBounds="True">
+                                            <Image x:Name="imgPickedImage" Source="{Binding Resim, Mode=OneWay, FallbackValue=''}" Aspect="AspectFill" BackgroundColor="Transparent"
+                                               VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                                               HeightRequest="71" WidthRequest="71"/>
+                                        </Frame>
+                                    </Frame>
+                                    <ImageButton x:Name="imgbtnResimCek" Grid.Column="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" 
+                                             Source="Camera.png" Aspect="AspectFit" BorderWidth="1" BorderColor="{StaticResource colorPrimaryFormIlacEkle}"
+                                             WidthRequest="41" HeightRequest="41" CornerRadius="20" BackgroundColor="Transparent"
+                                             xct:TouchEffect.NativeAnimation="True"/>
+                                </Grid>
+                                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Label Text="Kutu Adeti :" TextColor="{StaticResource colorPrimaryFormIlacEkle}" FontSize="Medium"
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"/>
+                                    <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button x:Name="btnAzaltKutuAdet" Text="--" TextColor="{StaticResource colorPrimaryFormIlacEkle}"
+                                            VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"
+                                            WidthRequest="41" HeightRequest="41" CornerRadius="20" FontSize="Large" Padding="0"
+                                            BindingContext="{Binding BindingContext, Source={x:Reference FirstStepPopup}}"
+                                            xct:TouchEffect.Command="{Binding NumberChanger}"
+                                            xct:TouchEffect.CommandParameter="KutuAdet,Down,1"
+                                            xct:TouchEffect.LongPressCommand="{Binding NumberChanger}"
+                                            xct:TouchEffect.LongPressCommandParameter="KutuAdet,Down,10"
+                                            xct:TouchEffect.NativeAnimation="True" Grid.Column="0"
+                                            BorderWidth="1" BorderColor="{StaticResource colorPrimaryFormIlacEkle}"/>
+                                        <Label x:Name="lblKutuAdet" Text="{Binding KutuAdet, Mode=OneWay, FallbackValue='0'}"
+                                           TextColor="{StaticResource colorPrimaryFormIlacEkle}" FontSize="Title" Grid.Column="1"
+                                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                        <Button x:Name="btnArtırKutuAdet" Text="+" TextColor="{StaticResource colorPrimaryFormIlacEkle}"
+                                            VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent"
+                                            WidthRequest="41" HeightRequest="41" CornerRadius="20" FontSize="Large" Padding="0"
+                                            BindingContext="{Binding BindingContext, Source={x:Reference FirstStepPopup}}"
+                                            xct:TouchEffect.Command="{Binding NumberChanger}"
+                                            xct:TouchEffect.CommandParameter="KutuAdet,Up,1"
+                                            xct:TouchEffect.LongPressCommand="{Binding NumberChanger}"
+                                            xct:TouchEffect.LongPressCommandParameter="KutuAdet,Up,10"
+                                            xct:TouchEffect.NativeAnimation="True" Grid.Column="2"
+                                            BorderWidth="1" BorderColor="{StaticResource colorPrimaryFormIlacEkle}"/>
+                                    </Grid>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Label Text="Kutudaki Plaka Adeti :" TextColor="{StaticResource colorPrimaryFormIlacEkle}" FontSize="Medium"
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"/>
+                                    <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button x:Name="btnAzaltPlakaAdet" Text="--" TextColor="{StaticResource colorPrimaryFormIlacEkle}"
+                                            VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"
+                                            WidthRequest="41" HeightRequest="41" CornerRadius="20" FontSize="Large" Padding="0"
+                                            BindingContext="{Binding BindingContext, Source={x:Reference FirstStepPopup}}"
+                                            xct:TouchEffect.Command="{Binding NumberChanger}"
+                                            xct:TouchEffect.CommandParameter="PlakaAdet,Down,1"
+                                            xct:TouchEffect.LongPressCommand="{Binding NumberChanger}"
+                                            xct:TouchEffect.LongPressCommandParameter="PlakaAdet,Down,10"
+                                            xct:TouchEffect.NativeAnimation="True" Grid.Column="0"
+                                            BorderWidth="1" BorderColor="{StaticResource colorPrimaryFormIlacEkle}"/>
+                                        <Label x:Name="lblPlakaAdet" Text="{Binding PlakaAdet, Mode=OneWay, FallbackValue='0'}"
+                                           TextColor="{StaticResource colorPrimaryFormIlacEkle}" FontSize="Title" Grid.Column="1"
+                                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                        <Button x:Name="btnArtırPlakaAdet" Text="+" TextColor="{StaticResource colorPrimaryFormIlacEkle}"
+                                            VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent"
+                                            WidthRequest="41" HeightRequest="41" CornerRadius="20" FontSize="Large" Padding="0"
+                                            BindingContext="{Binding BindingContext, Source={x:Reference FirstStepPopup}}"
+                                            xct:TouchEffect.Command="{Binding NumberChanger}"
+                                            xct:TouchEffect.CommandParameter="PlakaAdet,Up,1"
+                                            xct:TouchEffect.LongPressCommand="{Binding NumberChanger}"
+                                            xct:TouchEffect.LongPressCommandParameter="PlakaAdet,Up,10"
+                                            xct:TouchEffect.NativeAnimation="True" Grid.Column="2"
+                                            BorderWidth="1" BorderColor="{StaticResource colorPrimaryFormIlacEkle}"/>
+                                    </Grid>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Label Text="Plakadaki Hap Adeti :" TextColor="{StaticResource colorPrimaryFormIlacEkle}" FontSize="Medium"
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"/>
+                                    <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button x:Name="btnAzaltTaneAdet" Text="--" TextColor="{StaticResource colorPrimaryFormIlacEkle}"
+                                            VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"
+                                            WidthRequest="41" HeightRequest="41" CornerRadius="20" FontSize="Large" Padding="0"
+                                            BindingContext="{Binding BindingContext, Source={x:Reference FirstStepPopup}}"
+                                            xct:TouchEffect.Command="{Binding NumberChanger}"
+                                            xct:TouchEffect.CommandParameter="TaneAdet,Down,1"
+                                            xct:TouchEffect.LongPressCommand="{Binding NumberChanger}"
+                                            xct:TouchEffect.LongPressCommandParameter="TaneAdet,Down,10"
+                                            xct:TouchEffect.NativeAnimation="True" Grid.Column="0"
+                                            BorderWidth="1" BorderColor="{StaticResource colorPrimaryFormIlacEkle}"/>
+                                        <Label x:Name="lblTaneAdet" Text="{Binding TaneAdet, Mode=OneWay, FallbackValue='0'}"
+                                           TextColor="{StaticResource colorPrimaryFormIlacEkle}" FontSize="Title" Grid.Column="1"
+                                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                        <Button x:Name="btnArtırTaneAdet" Text="+" TextColor="{StaticResource colorPrimaryFormIlacEkle}"
+                                            VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent"
+                                            WidthRequest="41" HeightRequest="41" CornerRadius="20" FontSize="Large" Padding="0"
+                                            BindingContext="{Binding BindingContext, Source={x:Reference FirstStepPopup}}"
+                                            xct:TouchEffect.Command="{Binding NumberChanger}"
+                                            xct:TouchEffect.CommandParameter="TaneAdet,Up,1"
+                                            xct:TouchEffect.LongPressCommand="{Binding NumberChanger}"
+                                            xct:TouchEffect.LongPressCommandParameter="TaneAdet,Up,10"
+                                            xct:TouchEffect.NativeAnimation="True" Grid.Column="2"
+                                            BorderWidth="1" BorderColor="{StaticResource colorPrimaryFormIlacEkle}"/>
+                                    </Grid>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Spacing="0" Margin="0,7,0,0">
+                                    <Label Text="Toplam Hap Adeti :" TextColor="{StaticResource colorPrimaryFormIlacEkle}" FontSize="Medium" Margin="0,0,9,0"
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"/>
+                                    <Label x:Name="lblToplamAdet" Text="{Binding ToplamAdet, Mode=OneWay, FallbackValue='0'}" TextColor="{StaticResource colorPrimaryFormIlacEkle}" FontSize="Title"
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                                       VerticalOptions="CenterAndExpand" HorizontalOptions="Start"/>
+                                    <BoxView x:Name="boxvHap" BackgroundColor="{Binding Renk, Mode=OneWay, FallbackValue={StaticResource colorPrimaryFormIlacEkle}}"
+                                         VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Margin="5,0,0,0"
+                                         WidthRequest="23" HeightRequest="11" CornerRadius="5"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </xct:TabViewItem.Content>
+            </xct:TabViewItem>
+        </xct:TabView>
+    </Frame>
+</xct:Popup>
