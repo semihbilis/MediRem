@@ -4,17 +4,10 @@ namespace MediRem.Models.Dto
 {
     public class AddPillDto : BaseDtoEntity
     {
-        private string _Ad;
-        private string _Renk;
-        private string _Resim;
-        private int _KutuAdet;
-        private int _PlakaAdet;
-        private int _TaneAdet;
-        private int _ToplamAdet;
+        private string _Ad, _Renk, _Resim, _GunlukKullanimSaatleri;
+        private int _KutuAdet, _PlakaAdet, _TaneAdet, _ToplamAdet, _HerKullanimdaKacAdet;
         private SiklikTipi _SiklikTipi;
         private int? _XgundeBir;
-        private string _GunlukKullanimSaatleri;
-        private int _HerKullanimdaKacAdet;
         private AlimTavsiyesi _AlimTavsiyesi;
 
         public string Ad
@@ -38,7 +31,7 @@ namespace MediRem.Models.Dto
             set
             {
                 SetProperty(ref _KutuAdet, value <= 0 ? 1 : value);
-                ToplamAdet *= value;
+                ToplamAdet = value; //Value değerine eşitlenmiyor, sadece ToplamAdet özelliğinin set bloğunu çalıştırmak için yazıldı.
             }
         }
         public int PlakaAdet
@@ -47,7 +40,7 @@ namespace MediRem.Models.Dto
             set
             {
                 SetProperty(ref _PlakaAdet, value <= 0 ? 1 : value);
-                ToplamAdet *= value;
+                ToplamAdet = value;
             }
         }
         public int TaneAdet
@@ -56,7 +49,7 @@ namespace MediRem.Models.Dto
             set
             {
                 SetProperty(ref _TaneAdet, value <= 0 ? 1 : value);
-                ToplamAdet *= value;
+                ToplamAdet = value;
             }
         }
         public int ToplamAdet

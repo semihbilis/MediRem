@@ -3,8 +3,8 @@
            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
            xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
            Size="{StaticResource sizeColorPicker}"
-           Color="{StaticResource colorPopupBackgroundColor}"
-           BackgroundColor="{StaticResource colorPopupBackgroundColor}"
+           Color="{StaticResource colorBackgroundColorColorPicker}"
+           BackgroundColor="{StaticResource colorBackgroundColorColorPicker}"
            VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
            MinimumHeightRequest="253" MinimumWidthRequest="253"
            x:Class="MediRem.Views.Popups.ColorPicker">

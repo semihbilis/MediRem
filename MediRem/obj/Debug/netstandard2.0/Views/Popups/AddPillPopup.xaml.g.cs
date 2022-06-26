@@ -17,7 +17,7 @@ namespace MediRem.Views.Popups {
     public partial class AddPillPopup : global::Xamarin.CommunityToolkit.UI.Views.Popup {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.StackLayout FirstStepPopup;
+        private global::Xamarin.Forms.Frame frameAddPillPopup;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ImageButton imgbtnRenkSec;
@@ -76,7 +76,7 @@ namespace MediRem.Views.Popups {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AddPillPopup));
-            FirstStepPopup = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "FirstStepPopup");
+            frameAddPillPopup = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Frame>(this, "frameAddPillPopup");
             imgbtnRenkSec = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "imgbtnRenkSec");
             tbxName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "tbxName");
             imgbtnResimSec = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "imgbtnResimSec");

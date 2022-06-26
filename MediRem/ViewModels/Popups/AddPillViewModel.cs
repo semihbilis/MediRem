@@ -10,7 +10,7 @@ namespace MediRem.ViewModels.Popups
     public class AddPillViewModel : BaseViewModel
     {
         private INavigation _navigation;
-        public AddPillDto _addPillDto;
+        private AddPillDto _addPillDto;
 
         public AddPillViewModel(INavigation navigation, AddPillDto addPillDto = null)
         {
