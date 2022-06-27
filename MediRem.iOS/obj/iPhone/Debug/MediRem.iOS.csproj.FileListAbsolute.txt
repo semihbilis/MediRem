@@ -45,7 +45,9 @@ C:\Users\Semih\source\repos\MediRem\MediRem.iOS\bin\iPhone\Debug\zh-HK\Xamarin.F
 C:\Users\Semih\source\repos\MediRem\MediRem.iOS\bin\iPhone\Debug\zh-Hans\Xamarin.Forms.Platform.iOS.resources.dll
 C:\Users\Semih\source\repos\MediRem\MediRem.iOS\bin\iPhone\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
 C:\Users\Semih\source\repos\MediRem\MediRem.iOS\bin\iPhone\Debug\MediRem.dll
+C:\Users\Semih\source\repos\MediRem\MediRem.iOS\bin\iPhone\Debug\MediRem.Model.dll
 C:\Users\Semih\source\repos\MediRem\MediRem.iOS\bin\iPhone\Debug\MediRem.pdb
+C:\Users\Semih\source\repos\MediRem\MediRem.iOS\bin\iPhone\Debug\MediRem.Model.pdb
 C:\Users\Semih\source\repos\MediRem\MediRem.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
 C:\Users\Semih\source\repos\MediRem\MediRem.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
 C:\Users\Semih\source\repos\MediRem\MediRem.iOS\obj\iPhone\Debug\actool\_ProcessedImageAssetsPath.items

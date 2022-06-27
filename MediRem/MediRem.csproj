@@ -12,11 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MediRem.Model\MediRem.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Views\Popups\ColorPickerPopup.xaml.cs">
       <DependentUpon>ColorPickerPopup.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Popups\IlacEkleFirstStepPopup.xaml.cs">
-      <DependentUpon>IlacEkleFirstStepPopup.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Popups\AddPillPopup.xaml.cs">
       <DependentUpon>AddPillPopup.xaml</DependentUpon>

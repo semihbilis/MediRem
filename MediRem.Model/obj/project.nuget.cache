@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z8FAvUe4YAtQxceKD0Uxjompv/9eQOChIP8rQQwyN06z7sfW3DuLk3oJAklIS9E8s+tVQt/AiZg7Hc1THT09xQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Semih\\source\\repos\\MediRem\\MediRem.Model\\MediRem.Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Semih\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Semih\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

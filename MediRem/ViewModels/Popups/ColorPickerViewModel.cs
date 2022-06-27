@@ -1,4 +1,4 @@
-﻿using MediRem.Helper;
+﻿using MediRem.Helpers;
 using System.Collections.Generic;
 
 namespace MediRem.ViewModels.Popups

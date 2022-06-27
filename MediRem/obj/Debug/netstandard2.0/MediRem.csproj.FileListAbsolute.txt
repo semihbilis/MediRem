@@ -1,6 +1,8 @@
 C:\Users\Semih\source\repos\MediRem\MediRem\bin\Debug\netstandard2.0\MediRem.deps.json
 C:\Users\Semih\source\repos\MediRem\MediRem\bin\Debug\netstandard2.0\MediRem.dll
 C:\Users\Semih\source\repos\MediRem\MediRem\bin\Debug\netstandard2.0\MediRem.pdb
+C:\Users\Semih\source\repos\MediRem\MediRem\bin\Debug\netstandard2.0\MediRem.Model.dll
+C:\Users\Semih\source\repos\MediRem\MediRem\bin\Debug\netstandard2.0\MediRem.Model.pdb
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\MediRem.csproj.AssemblyReference.cache
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\MediRem.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\App.xaml.g.cs
@@ -12,11 +14,11 @@ C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\Views\Login
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\Views\Popups\AddPillPopup.xaml.g.cs
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\Views\Popups\ColorPickerPopup.xaml.g.cs
-C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\Views\Popups\IlacEkleFirstStepPopup.xaml.g.cs
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\MediRem.AssemblyInfoInputs.cache
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\MediRem.AssemblyInfo.cs
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\MediRem.csproj.CoreCompileInputs.cache
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\MediRem.csproj.CopyComplete
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\MediRem.dll
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\refint\MediRem.dll
 C:\Users\Semih\source\repos\MediRem\MediRem\obj\Debug\netstandard2.0\MediRem.pdb

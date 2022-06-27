@@ -6,7 +6,9 @@ C:\Users\Semih\source\repos\MediRem\MediRem.Android\bin\Debug\com.companyname.me
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\bin\Debug\com.companyname.medirem-Signed.apk
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\bin\Debug\com.companyname.medirem-Signed.apk.idsig
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\bin\Debug\MediRem.dll
+C:\Users\Semih\source\repos\MediRem\MediRem.Android\bin\Debug\MediRem.Model.dll
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\bin\Debug\MediRem.pdb
+C:\Users\Semih\source\repos\MediRem\MediRem.Android\bin\Debug\MediRem.Model.pdb
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\MonoAndroid,Version=v12.0.AssemblyAttributes.cs
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\build.props
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\adb.props
@@ -78,6 +80,8 @@ C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\android\assets
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\android\assets\MediRem.Android.dll
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\android\assets\MediRem.Android.pdb
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\android\assets\MediRem.dll
+C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\android\assets\MediRem.Model.dll
+C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\android\assets\MediRem.Model.pdb
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\android\assets\MediRem.pdb
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\android\assets\Mono.Android.dll
 C:\Users\Semih\source\repos\MediRem\MediRem.Android\obj\Debug\120\android\assets\Mono.Android.pdb

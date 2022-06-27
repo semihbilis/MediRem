@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "MediRem/1.0.0": {
         "dependencies": {
+          "MediRem.Model": "1.0.0",
           "NETStandard.Library": "2.0.3",
           "Xamarin.CommunityToolkit": "2.0.2",
           "Xamarin.Essentials": "1.7.3",
@@ -109,6 +110,11 @@
             "fileVersion": "5.0.0.927"
           }
         }
+      },
+      "MediRem.Model/1.0.0": {
+        "runtime": {
+          "MediRem.Model.dll": {}
+        }
       }
     }
   },
@@ -187,6 +193,11 @@
       "sha512": "sha512-UeOnndxByPTpbExq0jPL5zKYqtHN9ldsgjQfUk9XF1pWSJUIakF3nJkq/tCgCVp5E1yp9Eecgqcthzy6llKiGg==",
       "path": "xamarin.forms/5.0.0.2478",
       "hashPath": "xamarin.forms.5.0.0.2478.nupkg.sha512"
+    },
+    "MediRem.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

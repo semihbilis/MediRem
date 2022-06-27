@@ -4,16 +4,20 @@ namespace MediRem.Models.Dto
 {
     public class AddPillDto : BaseDtoEntity
     {
-        private string _Ad, _Renk, _Resim, _GunlukKullanimSaatleri;
-        private int _KutuAdet, _PlakaAdet, _TaneAdet, _ToplamAdet, _HerKullanimdaKacAdet;
+        private string _Ad, _Aciklama, _Renk, _Resim, _GunlukKullanimSaatleri;
+        private int _KutuAdet, _PlakaAdet, _TaneAdet, _ToplamAdet, _HerKullanimdaKacAdet, _SiklikTipiAraligi;
         private SiklikTipi _SiklikTipi;
-        private int? _XgundeBir;
         private AlimTavsiyesi _AlimTavsiyesi;
 
         public string Ad
         {
             get => _Ad;
             set => SetProperty(ref _Ad, value);
+        }
+        public string Aciklama
+        {
+            get => _Aciklama;
+            set => SetProperty(ref _Aciklama, value);
         }
         public string Renk
         {
@@ -63,10 +67,10 @@ namespace MediRem.Models.Dto
             get => _SiklikTipi;
             set => SetProperty(ref _SiklikTipi, value);
         }
-        public int? XGundeBir
+        public int SiklikTipiAraligi
         {
-            get => _XgundeBir;
-            set => SetProperty(ref _XgundeBir, value);
+            get => _SiklikTipiAraligi;
+            set => SetProperty(ref _SiklikTipiAraligi, value);
         }
         public string GunlukKullanimSaatleri
         {

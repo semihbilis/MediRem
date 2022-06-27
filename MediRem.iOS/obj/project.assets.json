@@ -170,6 +170,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "MediRem.Model": "1.0.0",
           "Xamarin.CommunityToolkit": "2.0.2",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2478"
@@ -179,6 +180,16 @@
         },
         "runtime": {
           "bin/placeholder/MediRem.dll": {}
+        }
+      },
+      "MediRem.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MediRem.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MediRem.Model.dll": {}
         }
       }
     },
@@ -351,6 +362,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "MediRem.Model": "1.0.0",
           "Xamarin.CommunityToolkit": "2.0.2",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2478"
@@ -360,6 +372,16 @@
         },
         "runtime": {
           "bin/placeholder/MediRem.dll": {}
+        }
+      },
+      "MediRem.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MediRem.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MediRem.Model.dll": {}
         }
       }
     },
@@ -532,6 +554,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "MediRem.Model": "1.0.0",
           "Xamarin.CommunityToolkit": "2.0.2",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2478"
@@ -541,6 +564,16 @@
         },
         "runtime": {
           "bin/placeholder/MediRem.dll": {}
+        }
+      },
+      "MediRem.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MediRem.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MediRem.Model.dll": {}
         }
       }
     },
@@ -713,6 +746,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "MediRem.Model": "1.0.0",
           "Xamarin.CommunityToolkit": "2.0.2",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2478"
@@ -722,6 +756,16 @@
         },
         "runtime": {
           "bin/placeholder/MediRem.dll": {}
+        }
+      },
+      "MediRem.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MediRem.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MediRem.Model.dll": {}
         }
       }
     }
@@ -1077,6 +1121,11 @@
       "type": "project",
       "path": "../MediRem/MediRem.csproj",
       "msbuildProject": "../MediRem/MediRem.csproj"
+    },
+    "MediRem.Model/1.0.0": {
+      "type": "project",
+      "path": "../MediRem.Model/MediRem.Model.csproj",
+      "msbuildProject": "../MediRem.Model/MediRem.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {

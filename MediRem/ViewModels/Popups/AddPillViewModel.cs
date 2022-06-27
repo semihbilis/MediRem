@@ -1,6 +1,10 @@
 ﻿using MediRem.Models.Dto;
+using MediRem.Models.Enums;
+using MediRem.Models.Extensions;
 using MediRem.Views.Popups;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -11,6 +15,9 @@ namespace MediRem.ViewModels.Popups
     {
         private INavigation _navigation;
         private AddPillDto _addPillDto;
+        //public List<string> pickerSiklikTipiSource = Enum.GetValues(typeof(SiklikTipi)).Cast<SiklikTipi>().Select(x => x.EnumToDisplayName()).ToList();
+        private string[] pickerSource = new string[5] { "wqe", "asd", "zxc", "wer", "sfd" };
+        //Picker çalışmıyor bakılacak.
 
         public AddPillViewModel(INavigation navigation, AddPillDto addPillDto = null)
         {
@@ -53,7 +60,6 @@ namespace MediRem.ViewModels.Popups
         {
             string[] pars = param.Trim().Split(',');
             string proc = pars[1].ToLower();
-
             int amount = 1;
             if (!String.IsNullOrEmpty(pars[2]))
             {

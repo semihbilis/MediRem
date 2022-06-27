@@ -119,6 +119,16 @@
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
         }
+      },
+      "MediRem.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MediRem.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MediRem.Model.dll": {}
+        }
       }
     }
   },
@@ -794,10 +804,16 @@
         "xamarin.forms.5.0.0.2478.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "MediRem.Model/1.0.0": {
+      "type": "project",
+      "path": "../MediRem.Model/MediRem.Model.csproj",
+      "msbuildProject": "../MediRem.Model/MediRem.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "MediRem.Model >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
       "Xamarin.CommunityToolkit >= 2.0.2",
       "Xamarin.Essentials >= 1.7.3",
@@ -836,7 +852,11 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Semih\\source\\repos\\MediRem\\MediRem.Model\\MediRem.Model.csproj": {
+              "projectPath": "C:\\Users\\Semih\\source\\repos\\MediRem\\MediRem.Model\\MediRem.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
