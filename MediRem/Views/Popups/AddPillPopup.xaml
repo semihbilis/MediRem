@@ -82,7 +82,8 @@
                                     <ImageButton Grid.Column="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" 
                                                  Source="Camera.png" Aspect="AspectFit" BorderWidth="1" BorderColor="{StaticResource colorPrimaryAddPillPopup}"
                                                  WidthRequest="41" HeightRequest="41" CornerRadius="20" BackgroundColor="Transparent"
-                                                 xct:TouchEffect.NativeAnimation="True"/>
+                                                 xct:TouchEffect.NativeAnimation="True"
+                                                 xct:TouchEffect.Command="{Binding BindingContext.TakePicture, Source={x:Reference frameAddPillPopup}}"/>
                                 </Grid>
                                 <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
                                     <Label Text="Kutu Adeti :" TextColor="{StaticResource colorPrimaryAddPillPopup}" FontSize="Medium"

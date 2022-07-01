@@ -23,7 +23,7 @@ namespace MediRem.Views
                 PlakaAdet = 3,
                 TaneAdet = 5,
                 Renk = "Purple",
-                Resim = "/storage/emulated/0/Android/data/com.companyname.medirem/cache/2203693cc04e0be7f4f024d5f9499e13/a5a559c5a84b4b1abd2420136a63f3b1/pill.jpeg",
+                Resim = "/data/user/0/com.companyname.medirem/files/Pictures/pill.jpeg",
                 SiklikTipi = Models.Enums.SiklikTipi.Gunluk,
                 SiklikTipiAraligi = 2,
                 GunlukKullanimSaatleri = "08:00,20:00",
@@ -31,6 +31,21 @@ namespace MediRem.Views
                 AlimTavsiyesi = Models.Enums.AlimTavsiyesi.YemektenOnce
             };
             Navigation.ShowPopup(new AddPillPopup(addPillDto));
+            AddPillDto addPillDto1 = new AddPillDto()
+            {
+                Ad = "TestAspirin1",
+                Aciklama = "TestAciklamaTestAs\npirin TestAspirin",
+                KutuAdet = 3,
+                PlakaAdet = 5,
+                TaneAdet = 7,
+                Renk = "Blue",
+                Resim = "/data/user/0/com.companyname.medirem/files/Pictures/3df6b2ef425346f0974990b9b30c3ba0.jpg",
+                SiklikTipi = Models.Enums.SiklikTipi.Haftalik,
+                SiklikTipiAraligi = 1,
+                GunlukKullanimSaatleri = "09:00,21:00",
+                HerKullanimdaKacAdet = 5,
+                AlimTavsiyesi = Models.Enums.AlimTavsiyesi.YemektenSonra
+            };
         }
     }
 }

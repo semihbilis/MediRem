@@ -1,10 +1,8 @@
 ﻿using MediRem.Models.Dto;
-using MediRem.Models.Enums;
-using MediRem.Models.Extensions;
 using MediRem.Views.Popups;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
+using System.Threading.Tasks;
 using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -23,6 +21,9 @@ namespace MediRem.ViewModels.Popups
         {
             _navigation = navigation;
             AddPillDto = addPillDto ?? new AddPillDto();
+            if (!string.IsNullOrEmpty(addPillDto.Resim))
+                if (!File.Exists(addPillDto.Resim))
+                    addPillDto.Resim = null;
         }
 
         public AddPillDto AddPillDto
@@ -30,21 +31,54 @@ namespace MediRem.ViewModels.Popups
             get => _addPillDto;
             set => SetProperty(ref _addPillDto, value);
         }
-        public Command NumberChanger => new Command<string>((param) => setCountValue(param));
+        public Command NumberChanger => new Command<string>((param) => SetCountValue(param));
         public Command ColorPicker => new Command(() => openColorPicker());
-        public Command ChoosePicture => new Command(() => openChoosePicker());
+        public Command ChoosePicture => new Command(async () => await OpenChoosePickerAsync());
+        public Command TakePicture => new Command(async () => await OpenCameraForPictureAsync());
 
-        private async void openChoosePicker()
+        private async Task OpenCameraForPictureAsync()
+        {
+            FileResult result = await MediaPicker.CapturePhotoAsync(new MediaPickerOptions()
+            {
+                Title = "İlaç resimini çekiniz..."
+            });
+            await LoadPhotoAsync(result);
+        }
+
+        private async Task LoadPhotoAsync(FileResult fileResult)
+        {
+            string[] resultTypes = fileResult.ContentType.Split('/');
+            if (fileResult == null || !resultTypes[0].Equals("image"))
+            {
+                AddPillDto.Resim = null;
+                return;
+            }
+            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures, Environment.SpecialFolderOption.Create);
+            if (!Directory.Exists(filePath))
+                Directory.CreateDirectory(filePath);
+
+            string newFile = Path.Combine(filePath, fileResult.FileName);
+
+            if (!File.Exists(newFile))
+            {
+                using (Stream stream = await fileResult.OpenReadAsync())
+                {
+                    using (FileStream newStream = File.OpenWrite(newFile))
+                    {
+                        await stream.CopyToAsync(newStream);
+                    }
+                }
+            }
+            AddPillDto.Resim = newFile;
+        }
+
+        private async Task OpenChoosePickerAsync()
         {
             FileResult result = await MediaPicker.PickPhotoAsync(new MediaPickerOptions()
             {
-                Title = "İlacın resmini seçiniz"
+                Title = "İlacın resmini seçiniz..."
             });
-            string[] resultTypes = result.ContentType.Split('/');
-            if (resultTypes[0].Equals("image"))
-            {
-                AddPillDto.Resim = result.FullPath;
-            }
+            await LoadPhotoAsync(result);
         }
 
         private async void openColorPicker()
@@ -56,7 +90,7 @@ namespace MediRem.ViewModels.Popups
             }
         }
 
-        private void setCountValue(string param)
+        private void SetCountValue(string param)
         {
             string[] pars = param.Trim().Split(',');
             string proc = pars[1].ToLower();
